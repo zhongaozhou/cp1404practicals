@@ -12,7 +12,7 @@ def get_password():
     """Get a valid password."""
     password = input(f"Enter your password (at least {MINIMUM_LENGTH} characters): ")
     while len(password) < MINIMUM_LENGTH:
-        print("The password lenght is less than 8!")
+        print("The password length is less than 8!")
         password = input(f"Enter your password (at least {MINIMUM_LENGTH} characters): ")
     return password
 
