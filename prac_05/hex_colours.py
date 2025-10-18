@@ -19,7 +19,7 @@ COLOUR_TO_HEX = {
 
 print("Available colours and codes:")
 for colour in COLOUR_TO_HEX:
-    print(f"{colour.title():<20} : {COLOUR_TO_HEX[colour]}")
+    print(f"{colour.title():20} : {COLOUR_TO_HEX[colour]}")
 print()
 
 colour_name = input("Enter colour name: ").lower()

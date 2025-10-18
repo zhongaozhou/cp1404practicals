@@ -11,7 +11,7 @@ print(CODE_TO_NAME)
 
 print("All states and names:")
 for code, name in CODE_TO_NAME.items():
-    print(f"{code:<3} is {name}")
+    print(f"{code:3} is {name}")
 print()
 
 state_code = input("Enter short state: ").upper()
