@@ -14,5 +14,22 @@ def main():
     print(f"Car has fuel: {my_car.fuel}")
     print(my_car)
 
+    # Create a new Car object called "limo" that is initialised with 100 units of fuel
+    limo = Car("Limo", 100)
+
+    # 2. Add 20 more units of fuel
+    limo.add_fuel(20)
+
+    # 3. Print the amount of fuel in limo
+    print(f"Limo has fuel: {limo.fuel}")
+
+    # 4. Attempt to drive the car 115 km using the drive method
+    distance_driven = limo.drive(115)
+    print(f"Limo drove {distance_driven}km")
+
+    # 7. print your car object/s to make sure that the __str__ method is working as expected
+    print(my_car)
+    print(limo)
+
 
 main()
