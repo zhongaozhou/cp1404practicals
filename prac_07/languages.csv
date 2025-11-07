@@ -1,4 +1,4 @@
-Language,Typing,Reflection,Year
+Language,Typing,Reflection,PointerArithmetic,Year
 Java,Static,Yes,No,1995
 C++,Static,No,Yes,1983
 Python,Dynamic,Yes,No,1991
