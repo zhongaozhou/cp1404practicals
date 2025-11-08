@@ -3,6 +3,8 @@ Estimated time: 35 minutes
 Actual time: 40 minites
 """
 
+from datetime import datetime
+
 
 class Guitar:
     """Represent a Guitar object."""
@@ -22,9 +24,13 @@ class Guitar:
         """Return a string of the Guitar."""
         return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
+    def __lt__(self, other):
+        """Less than comparison for sorting by year."""
+        return self.year < other.year
+
     def get_age(self):
         """Return how old the guitar is in years."""
-        current_year = 2025
+        current_year = datetime.now().year
         return current_year - self.year
 
     def is_vintage(self):
