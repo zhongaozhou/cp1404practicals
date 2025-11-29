@@ -9,7 +9,27 @@ from prac_06.car import Car
 
 def repeat_string(s, n):
     """Repeat string s, n times, with spaces in between."""
-    return s * n
+    return " ".join([s] * n)
+
+
+def format_phrase_as_sentence(phrase):
+    """
+    Format a phrase to start with a capital and end with a single period.
+    >>> format_phrase_as_sentence("hello")
+    'Hello.'
+    >>> format_phrase_as_sentence("It is an ex parrot.")
+    'It is an ex parrot.'
+    >>> format_phrase_as_sentence("abcd..")
+    'Abcd..'
+    """
+    # Capitalize the first letter
+    formatted = phrase.capitalize()
+
+    # Ensure it ends with one full stop
+    if formatted.endswith('.'):
+        return formatted
+    else:
+        return formatted + '.'
 
 
 def is_long_word(word, length=5):
@@ -22,7 +42,7 @@ def is_long_word(word, length=5):
     >>> is_long_word("Python", 6)
     True
     """
-    return len(word) > length
+    return len(word) >= length
 
 
 def run_tests():
@@ -46,13 +66,14 @@ def run_tests():
     # using the value passed in or the default
     # You should test both of these
     car = Car(fuel=10)
+    assert car.fuel == 10, "Car does not set custom fuel correctly"
 
 
 run_tests()
 
 # TODO: 3. Uncomment the following line and run the doctests
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
-# doctest.testmod()
+doctest.testmod()
 
 # TODO: 4. Fix the failing is_long_word function
 # (Don't change the tests, change the function!)
